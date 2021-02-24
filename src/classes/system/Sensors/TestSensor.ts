@@ -14,13 +14,14 @@ class TestSensor extends Sensor {
     Update(timeDelta: number) {
         this.timeDifference += timeDelta;
 
-        if (this.timeDifference) {
+        if (this.timeDifference > 1) {
             this.SendSignal();
             this.timeDifference = 0;
         }
     }
 
     SendSignal() {
+        console.log("Test sensor pulse");
         return 1;
     }
 }

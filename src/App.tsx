@@ -1,8 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { GameLoop } from './GameLoop';
+import { TestSensor } from './classes/system/Sensors/TestSensor';
 
 function App() {
+  const gl = new GameLoop();
+  gl.Start();
+  gl.addGameObject(new TestSensor());
+  gl.Stop();
   return (
     <div className="App">
       <header className="App-header">
