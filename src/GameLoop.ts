@@ -15,24 +15,24 @@ export class GameLoop {
         this.gameObjects = new Array();
     }
 
-    addGameObject(gameObject:GameObject) {
+    addGameObject = (gameObject:GameObject) => {
         this.gameObjects.push(gameObject);
     }
 
-    Start() {
+    Start = () => {
         window.requestAnimationFrame(this.gameLoop);
         this.running = true;
     }
 
-    Pause() {
+    Pause = () => {
         this.running = false;
     }
 
-    Resume() {
+    Resume = () => {
         this.running = true;
     }
 
-    Stop() {
+    Stop = () => {
         this.running = false;
         this.secondsPassed = 0;
         this.oldTimeStamp = 0;
